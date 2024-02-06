@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import Foundation
 
-struct ProductModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct Product: Identifiable{
+    var id = UUID().uuidString
+    var name : String
+    var asset : String
+    var price : String
+    var image : String
 }
 
-#Preview {
-    ProductModel()
-}
+var product = [
+    Product(name: "Chocolate IceCream", asset: "1", price: "100", image: "choco"),
+    Product(name: "Valila IceCream", asset: "2", price: "80", image: "vanila"),
+    Product(name: "Combo IceCream", asset: "3", price: "50", image: "cone"),
+    Product(name: "Valila IceCream", asset: "2", price: "80", image: "vanila"),
+    Product(name: "Chocolate IceCream", asset: "1", price: "100", image: "choco")
+]
